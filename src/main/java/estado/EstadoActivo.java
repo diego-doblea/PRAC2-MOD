@@ -1,4 +1,4 @@
-package com.universidad.biblioteca.estado;
+package estado;
 
 /**
  * Clase que representa el estado activo de un usuario.
@@ -8,10 +8,9 @@ public class EstadoActivo implements Estado {
     public boolean puedePedirPrestamo() {
         return true;
     }
-    
+
     @Override
     public String toString() {
         return "Activo";
     }
 }
-

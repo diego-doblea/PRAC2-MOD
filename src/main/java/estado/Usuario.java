@@ -1,4 +1,4 @@
-package com.universidad.biblioteca.estado;
+package estado;
 
 /**
  * Clase que representa a un usuario de la biblioteca.
@@ -6,36 +6,38 @@ package com.universidad.biblioteca.estado;
 public class Usuario {
     private String nombre;
     private Estado estado;
-    
+
     /**
      * Crea un usuario en estado activo por defecto.
+     * 
      * @param nombre Nombre del usuario.
      */
     public Usuario(String nombre) {
         this.nombre = nombre;
         this.estado = new EstadoActivo();
     }
-    
+
     public String getNombre() {
         return nombre;
     }
-    
+
     public Estado getEstado() {
         return estado;
     }
-    
+
     public void setEstado(Estado estado) {
         this.estado = estado;
     }
-    
+
     /**
      * Verifica si el usuario puede solicitar un préstamo.
+     * 
      * @return true si puede pedir préstamo, false de lo contrario.
      */
     public boolean puedePedirPrestamo() {
         return estado.puedePedirPrestamo();
     }
-    
+
     /**
      * Simula la solicitud de un préstamo.
      */
@@ -46,7 +48,7 @@ public class Usuario {
             System.out.println(nombre + " no puede solicitar un préstamo, su estado es: " + estado.toString());
         }
     }
-    
+
     /**
      * Simula que el usuario incumple la devolución, cambiando su estado a moroso.
      */
@@ -54,7 +56,7 @@ public class Usuario {
         System.out.println(nombre + " incumplió la devolución y su estado cambia a moroso.");
         this.estado = new EstadoMoroso();
     }
-    
+
     /**
      * Simula la devolución de material, restableciendo el estado a activo.
      */
@@ -63,4 +65,3 @@ public class Usuario {
         this.estado = new EstadoActivo();
     }
 }
-

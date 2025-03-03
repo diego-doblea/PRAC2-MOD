@@ -1,4 +1,4 @@
-package com.universidad.biblioteca.materiales;
+package materiales;
 
 /**
  * Clase abstracta que representa un material de la biblioteca.
@@ -10,7 +10,8 @@ public abstract class Material {
 
     /**
      * Constructor para inicializar un material.
-     * @param titulo Título del material.
+     * 
+     * @param titulo    Título del material.
      * @param categoria Categoría del material.
      */
     public Material(String titulo, String categoria) {
@@ -21,6 +22,7 @@ public abstract class Material {
 
     /**
      * Retorna el título del material.
+     * 
      * @return Título del material.
      */
     public String getTitulo() {
@@ -29,6 +31,7 @@ public abstract class Material {
 
     /**
      * Retorna la categoría del material.
+     * 
      * @return Categoría del material.
      */
     public String getCategoria() {
@@ -37,6 +40,7 @@ public abstract class Material {
 
     /**
      * Indica si el material está disponible para préstamo.
+     * 
      * @return true si está disponible, false en caso contrario.
      */
     public boolean isDisponible() {
@@ -62,4 +66,3 @@ public abstract class Material {
         return "Material [titulo=" + titulo + ", categoria=" + categoria + ", disponible=" + disponible + "]";
     }
 }
-

@@ -1,4 +1,4 @@
-package com.universidad.biblioteca.estado;
+package estado;
 
 /**
  * Clase que representa el estado moroso de un usuario.
@@ -8,10 +8,9 @@ public class EstadoMoroso implements Estado {
     public boolean puedePedirPrestamo() {
         return false;
     }
-    
+
     @Override
     public String toString() {
         return "Moroso";
     }
 }
-
